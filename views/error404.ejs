@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Mini Messageboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Mini Messageboard</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="error-container">
+            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#87CEEB" stroke-width="2" />
+                <path d="M12 7V13" stroke="#87CEEB" stroke-width="2" stroke-linecap="round" />
+                <circle cx="12" cy="16" r="1" fill="#87CEEB" />
+            </svg>
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>The page you were looking for doesn't exist or has been moved.</p>
+            <p class="error-message">
+                <%= message || "We couldn't find the page you requested." %>
+            </p>
+            <a href="/" class="btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>

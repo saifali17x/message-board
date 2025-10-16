@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Messageboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Mini Messageboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Messages</a></li>
+                    <li><a href="/new">New Message</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="messages-container">
+            <% if (messages.length===0) { %>
+                <div class="empty-state">
+                    <h2>No messages yet!</h2>
+                    <p>Be the first to leave a message</p>
+                    <a href="/new" class="btn">Create New Message</a>
+                </div>
+                <% } else { %>
+                    <% messages.forEach((message, index)=> { %>
+                        <ul class="message">
+                            <li class="message-text">
+                                <%= message.text %>
+                            </li>
+                            <li class="message-user">Posted by: <%= message.user %>
+                            </li>
+                            <li class="message-date">On: <%= message.added.toLocaleString() %>
+                            </li>
+                        </ul>
+                        <% }) %>
+                            <div class="action-bar">
+                                <a href="/new" class="btn">Add New Message</a>
+                            </div>
+                            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

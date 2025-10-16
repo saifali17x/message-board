@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error | Mini Messageboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Mini Messageboard</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="error-container">
+            <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L4 20H20L12 4Z" stroke="#87CEEB" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M12 15V10" stroke="#87CEEB" stroke-width="2" stroke-linecap="round" />
+                <circle cx="12" cy="17" r="1" fill="#87CEEB" />
+            </svg>
+            <h1>500</h1>
+            <h2>Internal Server Error</h2>
+            <p>Sorry, something went wrong on our end.</p>
+            <p class="error-message">
+                <%= message || "We're experiencing technical difficulties. Please try again later." %>
+            </p>
+            <a href="/" class="btn">Back to Home</a>
+
+            <% if (error && process.env.NODE_ENV !=='production' ) { %>
+                <div class="error-details">
+                    <h3>Error Details</h3>
+                    <pre><%= error.stack %></pre>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
