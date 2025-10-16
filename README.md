@@ -2,7 +2,7 @@
 
 A simple, elegant message board application built with Express and EJS templating engine. Users can view existing messages and add new ones to the board.
 
-![Mini Message Board Screenshot](https://via.placeholder.com/800x400?text=Mini+Message+Board)
+![Mini Message Board Screenshot](/public/Mini-MessageBoard.png)
 
 ## Features
 
