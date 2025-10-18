@@ -3,7 +3,7 @@ const express = require("express");
 const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -29,5 +29,5 @@ app.use((req, res, next) => {
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log("Server is running on http://localhost:8000");
+  console.log(`Server is running on port ${PORT}`);
 });
