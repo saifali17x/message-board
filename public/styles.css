@@ -298,3 +298,22 @@ form {
   box-shadow: 0 6px 8px rgba(135, 206, 235, 0.3);
   transform: translateY(-2px);
 }
+
+.validation-errors {
+  background-color: #ffe6e6;
+  border-left: 4px solid #ff5252;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.validation-errors ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.validation-errors li {
+  margin-bottom: 5px;
+}
